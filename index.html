@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wordly dictionary helps you explore word definitions,pronunciation and vocabulary.">
+    <title>Wordly Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="#home" class="logo" aria-label="Wordly home">Wordly<span>.</span></a>
+        <button
+        id="theme-toggle"
+        class="theme-button"
+        type="button"
+        aria-label="Switch to dark theme"
+        >
+        Darkmode
+        </button>
+    </header>
+    <main id="home" class="container">
+        <section class="hero" aria-labelledby="page-title">
+            <p class="eyebrow">YOUR PERSONAL LANGUAGE LEARNING ASSISTANT</p>
+            <h1 id="page-title">Discover the meaning <br> behind every word</h1>
+            <p class="intro">Expand your vocabulary and improve your language skills with our wordly dictionary.</p>
+<form id="search-form" class="search-form">
+    <label class="visually-hidden" for="word-input">Search for a word</label>
+    <input
+        type="text"
+        id="word-input"
+        name="word"
+        placeholder="Search for a word"
+        autoComplete="off"
+        required
+        >
+        <button id="search-button" type="submit">Search word</button>
+</form>
+<p class="search-hint">Try a new word and discover something interesting.</p>
+        </section>
+        <p id="status-message"
+        class="status-message"
+        role="status"
+        aria-live="polite"></p>
+        <section id="results-section"
+        class="results-section"
+        aria-labelledby="results-heading" hidden>
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">WORD EXPLORER</p>
+                <h2 id="results-heading">Your search results</h2>
+            </div>
+            <button id="favorite-button" class="favorite-button" type="button" aria-pressed="false">save word</button>
+                <span class="favorite-icon" aria-hidden="true">☆</span>
+                <span class="favorite-text">Add to favorites</span>
+        </div>
+        <div id="word-details"></div>
+    </section>
+    <section id="favorites-section" class="favorites-section" aria-labelledby="favorites-heading">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">YOUR COLLECTION</p>
+                <h2 id="favorites-heading">Your favorite words</h2>
+            </div>
+        </div>
+        <p id="favorites-empty" class="empty-message">Your saved words will appear here.</p>
+        <ul id="favorite-list" class="favorite-list"></ul>
+    </section>
+            
+    </main>
+    <footer class="site-footer">
+        <p>Wordly - Everyword opens a new world.</p>
+        <p>Dictionary data provided by the Free Dictionary API.</p>
+    </footer>
+    
+</body>
+</html>
